@@ -1,4 +1,4 @@
-﻿Các chức năng chưa hoàn thiện:
+﻿﻿Các chức năng chưa hoàn thiện:
  1. Vẽ:
     + Cung tròn
     + Cung Ellipse

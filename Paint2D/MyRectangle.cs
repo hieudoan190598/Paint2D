@@ -48,10 +48,11 @@ namespace Paint2D
         }
         public override void mouseDown(MouseEventArgs e) {
             //ve
-            if (this.isDraw)
+            if (this.isDraw && e.Button==MouseButtons.Left)
             {
                 this.startPoint = e.Location;
                 this.endPoint = e.Location;
+                //this.endPoint.X += 1; //tránh TH tồn tại width=height=0
             }
             //move or resize
             if (this.isMove || this.isResize)

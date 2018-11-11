@@ -30,7 +30,7 @@ namespace Paint2D
        //Override setSelect()
         public override void setSelect()
         {
-            //base.setSelect();
+            base.setSelect();
             foreach (MyLine l in listLine)
             {
                 l.setSelect();
@@ -63,6 +63,7 @@ namespace Paint2D
                         firstTime = false;
                     }
                     curLine.endPoint = e.Location;
+                    this.setSelect();
                 }
                 //move
                 if (isMove)
@@ -77,7 +78,6 @@ namespace Paint2D
         public override void mouseMove( MouseEventArgs e)
         {
             curLine.mouseMove(e);
-         
         }
         public override void mouseUp(MouseEventArgs e)
         {
@@ -97,9 +97,7 @@ namespace Paint2D
         {
             if (e.Button == MouseButtons.Left)
             {
-
                 isDraw = false;
-                curLine.isDraw = false;
             }
         }
 

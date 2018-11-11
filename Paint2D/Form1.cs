@@ -153,6 +153,7 @@ namespace Paint2D
                         //inProcess = true;
                     }
                 } //end TH mode =1
+                    
                 curObj.mouseDown(e);
                 picBox.Refresh();
             } //end if click left mouse
@@ -205,7 +206,7 @@ namespace Paint2D
             //inProcess = false;
             //curObj.isMove = false;
             //curObj.isDraw = false;
-            //picBox.Refresh();
+            picBox.Refresh();
         }
 
         private void btnLine_Click(object sender, EventArgs e)

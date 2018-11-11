@@ -20,13 +20,14 @@ namespace Paint2D
             int height = Math.Abs(endPoint.Y - startPoint.Y);
             int spX = Math.Min(startPoint.X, endPoint.X);
             int spY = Math.Min(startPoint.Y, endPoint.Y);
-            mRec = new Rectangle(spX, spY, Math.Min(width, height),Math.Max(width, height));
+            //mRec = new Rectangle(spX, spY, Math.Min(width, height),Math.Max(width, height));
+            mRec = new Rectangle(spX, spY,width,height);
 
             List<Point> l = getPointParabola(true); //right
-            g.DrawLines(p, l.ToArray());
+            if(l.Count>0) g.DrawLines(p, l.ToArray());
             l.Clear();
             l = getPointParabola(false); //left
-            g.DrawLines(p, l.ToArray());
+            if (l.Count > 0)  g.DrawLines(p, l.ToArray());
             //show control point
             if (this.isSelect)
             {
