@@ -105,10 +105,10 @@ namespace Paint2D
         {
             listControlPoint.Clear();
             this.listControlPoint.Add(new Rectangle(startPoint.X - 5, startPoint.Y - 5,10, 10));
-            this.listControlPoint.Add(new Rectangle(endPoint.X - 5, endPoint.Y - 5, 10, 10));
+            this.listControlPoint.Add(new Rectangle(e
+        public override bool isContain(Point loc)ndPoint.X - 5, endPoint.Y - 5, 10, 10));
         }
         //Override isContain
-        public override bool isContain(Point loc)
         {
             if (loc.X < Math.Min(startPoint.X, endPoint.X) ||
                 loc.X > Math.Max(startPoint.X, endPoint.X) ||
